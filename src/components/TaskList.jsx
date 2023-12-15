@@ -1,12 +1,36 @@
-import React from "react";
-import { format } from "date-fns";
+import React, { useEffect } from "react";
+import { format, set } from "date-fns";
 
 import AddTask from "./AddTask";
 import TaskCardItem from "./TaskCardItem";
 import TaskListItem from "./TaskListItem";
+import Dropdown from "./Dropdown/Dropdown";
 
 function TaskList({ taskList, setTaskList, task, setTask }) {
   const [viewType, setViewType] = React.useState("list");
+  const [searchText, setSearchText] = React.useState("");
+  const [filteredTaskList, setFilteredTaskList] = React.useState(taskList);
+
+  useEffect(() => {
+    console.log(searchText);
+    if (searchText === "") {
+      setFilteredTaskList(taskList);
+    } else {
+      const newFilteredTaskList = taskList.filter((task) =>
+        task.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredTaskList(newFilteredTaskList);
+    }
+  }, [searchText]);
+
+  useEffect(() => {
+    setFilteredTaskList(taskList);
+  }, [taskList]);
+
+  const searchTask = (searchValue) => {
+    setSearchText(searchValue);
+    console.log(searchValue);
+  };
 
   function compare(a, b) {
     const importatA = a.important;
@@ -83,10 +107,18 @@ function TaskList({ taskList, setTaskList, task, setTask }) {
           <span className="title">My Tasks</span>
           <span className="count">{taskList.length}</span>
         </span>
-        <span className="filter">
-          <i className="bi bi-filter"></i>
-          <span>Filter</span>
-        </span>
+        <input
+          type="text"
+          className="search"
+          placeholder="Search for task by title or tag"
+          onChange={(e) => {
+            searchTask(e.target.value);
+          }}
+        />
+        <div className="filter">
+          {/* <i className="bi bi-filter"></i> */}
+          <Dropdown title="Select Filters" />
+        </div>
       </div>
       <div className="head__footer">
         <span className="time">{format(new Date(), "EEEE, MMMM d")}</span>
@@ -117,7 +149,7 @@ function TaskList({ taskList, setTaskList, task, setTask }) {
           {viewType === "list" ? (
             <div className="task__list__view">
               <ul>
-                {taskList.sort(compare).map((task) => {
+                {filteredTaskList.sort(compare).map((task) => {
                   return (
                     <TaskListItem
                       key={task.id}
@@ -135,7 +167,7 @@ function TaskList({ taskList, setTaskList, task, setTask }) {
           ) : (
             <div className="task__card__view">
               <ul>
-                {taskList.sort(compare).map((task) => {
+                {filteredTaskList.sort(compare).map((task) => {
                   return (
                     <TaskCardItem
                       key={task.id}

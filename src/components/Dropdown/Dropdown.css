@@ -1,0 +1,90 @@
+.dd-wrapper {
+  position: relative;
+  width: 220px;
+  font-size: 1.6rem;
+  user-select: none;
+}
+
+.dd-wrapper .dd-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background: #fff;
+  line-height: 38px;
+  cursor: pointer;
+  outline: none;
+  width: 222px;
+}
+
+.dd-wrapper .dd-header span {
+  display: flex;
+  margin-right: 20px;
+}
+
+.dd-header-title {
+  color: #000;
+  margin: 2px 20px;
+  margin-right: 30px;
+}
+
+.bi-chevron-down,
+.bi-chevron-up {
+  color: #000;
+  margin-right: 20px;
+}
+
+.dd-list {
+  position: absolute;
+  z-index: 10;
+
+  max-height: 215px;
+  border: 1px solid rgb(223, 223, 223);
+  border-top: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 2px 5px -1px rgb(232, 232, 232);
+  background-color: white;
+  font-weight: 700;
+  text-align: left;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.2s ease-in-out;
+
+  width: 222px;
+  font-size: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dd-list-item {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 10px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+  cursor: pointer;
+
+  width: 222px;
+  font-size: 1rem;
+
+  border: 1px solid rgb(223, 223, 223);
+  border-top: none;
+
+  box-shadow: 0 2px 5px -1px rgb(232, 232, 232);
+  background-color: white;
+
+  text-align: left;
+
+  border: none;
+}
+
+.dd-scroll-list {
+  overflow-y: auto;
+  max-height: 215px;
+}

@@ -16,6 +16,8 @@ const initialTaskData = [
     updated: "2023-10-12T22:02",
     dueDate: "2023-11-12T22:02",
     important: true,
+    priority: "high",
+    tags: ["react", "javascript"],
   },
   {
     id: 2,
@@ -26,6 +28,8 @@ const initialTaskData = [
     updated: "2023-09-12T22:02",
     dueDate: "2023-09-12T22:02",
     important: false,
+    priority: "low",
+    tags: ["node", "javascript"],
   },
   {
     id: 3,
@@ -36,6 +40,8 @@ const initialTaskData = [
     updated: "2023-11-12T22:02",
     dueDate: "2023-11-12T22:02",
     important: false,
+    priority: "medium",
+    tags: ["microservice", "javascript"],
   },
 ];
 
@@ -82,6 +88,19 @@ function App() {
     setTaskList(updatedTaskList);
   };
 
+  function getPriorityClass(priority) {
+    switch (priority) {
+      case "high":
+        return "priority-high";
+      case "medium":
+        return "priority-medium";
+      case "low":
+        return "priority-low";
+      default:
+        return "priority";
+    }
+  }
+
   return (
     <div className="App">
       <div className="container">
@@ -112,9 +131,18 @@ function App() {
               <span>Due: {task.dueDate} </span>
             </p>
             <p>
+              <i className="bi bi-flag"></i>
+              <span>
+                Priority:{" "}
+                <span className={getPriorityClass(task.priority)}>
+                  {task.priority}
+                </span>
+              </span>
+            </p>
+            <p>
               <i className="bi bi-tag"></i>
               <span>
-                <TagsInput />
+                <TagsInput tagList={task.tags} />
               </span>
             </p>
             <textarea

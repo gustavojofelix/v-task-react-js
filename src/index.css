@@ -1,30 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
-:root{
-  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+:root {
+  --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style: none;
 }
 
-.App{
+.App {
   min-height: 100vh;
 }
 
-.container{
+.container {
   margin: 0 auto;
-
- 
 }
 
-.main{
+.main {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -32,32 +31,32 @@
   gap: 15px;
 }
 
-.taskList{
+.taskList {
   width: 74%;
 }
 
-.taskDetails{
+.taskDetails {
   width: 25%;
   padding: 20px 20px;
-  background-color: #faf9f8;;
+  background-color: #faf9f8;
   box-shadow: var(--box-shadow);
   position: fixed;
-    height: 100%;
-    right: 0;
-    box-shadow: 0px 1.2px 3.6px rgba(0,0,0,0.1),0px 6.4px 14.4px rgba(0,0,0,0.1)
-    
+  height: 100%;
+  right: 0;
+  box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+    0px 6.4px 14.4px rgba(0, 0, 0, 0.1);
 }
 
-.taskDetails p{
+.taskDetails p {
   padding: 15px;
   margin-bottom: 5px;
   background-color: #fff;
   border-radius: 7px;
   display: flex;
-  color: rgb(13, 153, 240);;
+  color: rgb(13, 153, 240);
 }
 
-.taskDetails p.task__title{
+.taskDetails p.task__title {
   font-size: 18px;
   font-weight: 600;
   padding: 15px;
@@ -65,23 +64,22 @@
   background-color: #fff;
   border-radius: 7px;
   display: flex;
-  
 }
 
-.taskDetails p span{
+.taskDetails p span {
   padding-left: inherit;
   flex-grow: 1;
 }
 
-.taskDetails p.task__title span{
+.taskDetails p.task__title span {
   color: #000000;
 }
 
-.taskDetails p.task__title span:focus{
+.taskDetails p.task__title span:focus {
   outline: 0.5px solid #eaeaea;
 }
 
-.description{
+.description {
   font-size: 16px;
   padding: 15px;
   background-color: #fff;
@@ -89,45 +87,45 @@
   min-height: 100px;
 
   flex-grow: 1;
-    padding: 5px 5px;
-    border: 1px solid #eaeaea;
-    font-size: 18px;
-    resize: none;
-    width: 100%;
+  padding: 5px 5px;
+  border: 1px solid #eaeaea;
+  font-size: 18px;
+  resize: none;
+  width: 100%;
 }
 
-.description:focus{
+.description:focus {
   outline: 0.5px solid #eaeaea;
 }
 
-.taskDetails p.task__details__footer{
+.taskDetails p.task__details__footer {
   position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 25%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #f7f4f4;
-    border-top: groove;
-    border-radius: 0;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f7f4f4;
+  border-top: groove;
+  border-radius: 0;
 }
 
-input[type="date"]{
+input[type="date"] {
   background-color: rgb(13, 153, 240);
-  font-family: "Roboto Mono",monospace;
+  font-family: "Roboto Mono", monospace;
   color: #ffffff;
   border: none;
   outline: none;
   border-radius: 5px;
 }
-::-webkit-calendar-picker-indicator{
+::-webkit-calendar-picker-indicator {
   background-color: #ffffff;
   padding: 5px;
   cursor: pointer;
   border-radius: 3px;
 }
 
-header{
+header {
   min-height: 70px;
   display: flex;
   align-items: center;
@@ -136,28 +134,28 @@ header{
   background-color: rgb(13, 153, 240);
   border-radius: 0px;
   box-shadow: var(--box-shadow);
-  box-shadow: 1px 1.2px 3.6px rgba(0,0,0,0.1),1px 6.4px 14.4px rgba(0,0,0,0.1);
+  box-shadow: 1px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+    1px 6.4px 14.4px rgba(0, 0, 0, 0.1);
 }
 
-header .logo{
+header .logo {
   display: flex;
   align-items: center;
- 
 }
 
-header .logo img{
+header .logo img {
   max-width: 35px;
   cursor: pointer;
 }
 
-header .logo span{
+header .logo span {
   font-size: 22px;
   margin-left: 7px;
   cursor: pointer;
   color: #dfdfdf;
 }
 
-header .themeSelector span{
+header .themeSelector span {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -167,24 +165,24 @@ header .themeSelector span{
   border: 1px solid #dfdfdf;
 }
 
-header .themeSelector .activeTheme{
+header .themeSelector .activeTheme {
   height: 30px;
   width: 30px;
 }
 
 .add__task__container {
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: var(--box-shadow);
 }
 
-.add__task__container .task__title{
+.add__task__container .task__title {
   display: flex;
   padding: 10px 20px;
   align-items: center;
 }
 
-.add__task__container .task__title input{
+.add__task__container .task__title input {
   flex-grow: 1;
   margin-left: 20px;
   padding: 5px 5px;
@@ -192,14 +190,13 @@ header .themeSelector .activeTheme{
   font-size: 18px;
 }
 
-.add__task__container form{
+.add__task__container form {
   display: flex;
   flex-direction: column;
   gap: 7px;
-
 }
 
-.form__footer{
+.form__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -208,7 +205,7 @@ header .themeSelector .activeTheme{
   background-color: aliceblue;
 }
 
-.addTask form input{
+.addTask form input {
   flex-grow: 1;
   padding: 5px 5px;
   border: 1px solid #eaeaea;
@@ -216,14 +213,14 @@ header .themeSelector .activeTheme{
   font-size: 18px;
 }
 
-.add__task__container form input:focus{
+.add__task__container form input:focus {
   outline: 0.25px solid #eaeaea;
   border: 1px solid aliceblue;
 }
 
-.add__task__container form button{
+.add__task__container form button {
   background-color: #03ba5c;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   padding: 5px 20px;
   border-radius: 5px;
@@ -231,48 +228,47 @@ header .themeSelector .activeTheme{
   font-size: 18px;
 }
 
-.add__task__container form button:hover{
+.add__task__container form button:hover {
   background-color: #03b056;
 }
 
-.show__task{
+.show__task {
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 20px;
 }
 
-.show__task div.head{
+.show__task div.head {
   padding: 10px 0px 0px 0px;
   display: flex;
   align-items: center;
 }
 
-.show__task div.head span:first-child{
+.show__task div.head span:first-child {
   flex-grow: 1;
 }
 
-.head__footer{
+.head__footer {
   font-size: 12px;
-    color: #737373;
-    padding-bottom: 20px;
+  color: #737373;
+  padding-bottom: 20px;
 }
 
-
-.task__view__header{
+.task__view__header {
   display: flex;
-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 10px 0px 0px 0px;
   gap: 10px;
   font-size: large;
 }
 
-.show__task .title{
+.show__task .title {
   font-size: 18px;
   font-weight: 600;
 }
 
-.show__task .count{
+.show__task .count {
   background-color: #dfdfdf;
   color: #525252;
   padding: 5px 10px;
@@ -280,37 +276,37 @@ flex-direction: row-reverse;
   margin-left: 10px;
 }
 
-.showTask .clearAll{
+.showTask .clearAll {
   background-color: #0f6af3;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.showTask .clearAll:hover{
+.showTask .clearAll:hover {
   background-color: #1061db;
 }
 
-.task__item__container{
+.task__item__container {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
-
-
 }
 
-.task__item__container{
+.task__item__container {
   background-color: #fff;
-    background-color: var(--bg-primary);
-    box-shadow: 0px 0.3px 0.9px rgba(0,0,0,0.1), 0px 1.6px 3.6px rgba(0,0,0,0.1);
-    box-shadow: 0px 0.3px 0.9px rgba(0,0,0,0.1),0px 1.6px 3.6px rgba(0,0,0,0.1);
-    margin-top: 8px;
-    border-radius: 4px;
-    padding: 0px 16px;
-    cursor: pointer;
-    /* min-height: 52px;
+  background-color: var(--bg-primary);
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1),
+    0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1),
+    0px 1.6px 3.6px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  border-radius: 4px;
+  padding: 0px 16px;
+  cursor: pointer;
+  /* min-height: 52px;
     display: flex;
     align-items: center;
     position: relative;
@@ -319,32 +315,32 @@ flex-direction: row-reverse;
     flex-wrap: wrap; */
 }
 
-.task__item__container:hover{
+.task__item__container:hover {
   background-color: aliceblue;
 }
 
-.task__item__container p.task_detail{
+.task__item__container p.task_detail {
   display: flex;
 }
 
-.task__item__container p.task_detail span{
+.task__item__container p.task_detail span {
   flex-grow: 1;
   font-size: 12px;
   color: #737373;
 }
 
-.task__item__container .task__title{
-display: flex;
+.task__item__container .task__title {
+  display: flex;
   align-items: center;
   padding: 10px 0 0 0;
 }
 
-.task__item__container .task__title span{
+.task__item__container .task__title span {
   flex-grow: 1;
   margin-left: 15px;
 }
 
-.show__task .task__card__view ul{
+.show__task .task__card__view ul {
   margin: 30px 5px 20px 5px;
   display: flex;
   flex-direction: row;
@@ -353,7 +349,7 @@ display: flex;
   gap: 15px;
 }
 
-.show__task .task__card__view li{
+.show__task .task__card__view li {
   padding: 15px 10px;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
@@ -364,95 +360,190 @@ display: flex;
   border-left: 5px solid #1365dfaf;
 }
 
-.show__task .task__card__view li:hover{
+.show__task .task__card__view li:hover {
   background-color: #f8f8f8;
 }
 
-.show__task .task__card__view li p{
+.show__task .task__card__view li p {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.show__task .task__card__view li .name{
+.show__task .task__card__view li .name {
   font-size: 18px;
   padding-bottom: 5px;
 }
 
-.show__task .task__card__view li .time{
+.show__task .task__card__view li .time {
   font-size: 12px;
   color: #737373;
 }
 
-.bi{
-  color:  rgb(13, 153, 240);;
+input.search {
+  width: 20%;
+  min-width: 20%;
+  border: 1px solid #eaeaea;
+  border-radius: 7px;
+  padding: 12px;
+  padding-left: 14px;
+  margin-right: 14px;
 }
 
- i.bi-pencil{
+input.search:focus {
+  outline: none;
+}
+
+.bi {
+  color: rgb(13, 153, 240);
+}
+
+i.bi-pencil {
   font-size: 18px;
-  color: #1363DF;
+  color: #1363df;
   cursor: pointer;
 }
 
- i.bi-trash{
+i.bi-trash {
   font-size: 18px;
-  color: #D82148;
+  color: #d82148;
   cursor: pointer;
 }
 
-.in-progress{
-  color: #F8E71C;
-
+.in-progress {
+  color: #f8e71c;
 }
 
-.pending{
-  color: #FF9F1C;
-  
+.pending {
+  color: #ff9f1c;
 }
 
-.active{
-  color: #1365DF;
+.active {
+  color: #1365df;
 }
 
-.done{
-color: #7ED321;
-
+.done {
+  color: #7ed321;
 }
 
-.overdue{
-  color: #D82148 !important;
+.overdue {
+  color: #d82148 !important;
 }
 
-.light{
-  background-color: #FFFFFF;
-  transition: all 500ms;  
+.priority {
+  border-radius: 15px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  padding: 5px 15px;
 }
 
-.medium{
-  background-color: #EFEFEF;
+.priority-high {
+  border-radius: 15px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  padding: 5px 15px;
+
+  background-color: #d82148;
+  color: #000;
+}
+
+.priority-medium {
+  border-radius: 15px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  padding: 5px 15px;
+  background-color: #ff9f1c;
+  color: #000;
+}
+
+.priority-low {
+  border-radius: 15px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  padding: 5px 15px;
+  background-color: #f8e71c;
+  color: #000;
+}
+
+.light {
+  background-color: #ffffff;
   transition: all 500ms;
 }
 
-.dark{
-  background-color: #15202B;
+.medium {
+  background-color: #efefef;
   transition: all 500ms;
 }
 
-.gradientOne{
-  background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+.dark {
+  background-color: #15202b;
+  transition: all 500ms;
 }
-.gradientTwo{
-  background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
+
+.gradientOne {
+  background: linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+}
+.gradientTwo {
+  background: linear-gradient(235deg, #ffffff 0%, #000f25 100%),
+    linear-gradient(180deg, #6100ff 0%, #000000 100%),
+    linear-gradient(
+      235deg,
+      #ffa3ac 0%,
+      #ffa3ac 40%,
+      #00043c calc(40% + 1px),
+      #00043c 60%,
+      #005d6c calc(60% + 1px),
+      #005d6c 70%,
+      #00c9b1 calc(70% + 1px),
+      #00c9b1 100%
+    ),
+    linear-gradient(
+      125deg,
+      #ffa3ac 0%,
+      #ffa3ac 40%,
+      #00043c calc(40% + 1px),
+      #00043c 60%,
+      #005d6c calc(60% + 1px),
+      #005d6c 70%,
+      #00c9b1 calc(70% + 1px),
+      #00c9b1 100%
+    );
   background-blend-mode: soft-light, screen, darken, normal;
 }
 
-.gradientThree{
-  background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
+.gradientThree {
+  background: linear-gradient(125deg, #ffffff 0%, #000000 100%),
+    linear-gradient(
+      200deg,
+      #ffd9e8 0%,
+      #ffd9e8 50%,
+      #de95ba calc(50% + 1px),
+      #de95ba 60%,
+      #7f4a88 calc(60% + 1px),
+      #7f4a88 75%,
+      #4a266a calc(75% + 1px),
+      #4a266a 100%
+    ),
+    linear-gradient(
+      113deg,
+      #ffd9e8 0%,
+      #ffd9e8 40%,
+      #de95ba calc(40% + 1px),
+      #de95ba 50%,
+      #7f4a88 calc(50% + 1px),
+      #7f4a88 70%,
+      #4a266a calc(70% + 1px),
+      #4a266a 100%
+    );
   background-blend-mode: overlay, overlay, normal;
 }
 
 @media only screen and (max-width: 800px) {
-  .showTask li{
+  .showTask li {
     width: 100%;
   }
 }

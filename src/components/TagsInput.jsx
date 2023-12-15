@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./TagsInput.css";
 
-function TagsInput() {
+function TagsInput({ tagList }) {
   const [inputValue, setInputValue] = React.useState("");
-  const [tags, setTags] = React.useState([]);
+  const [tags, setTags] = React.useState(tagList);
+
+  useEffect(() => {
+    setTags(tagList);
+  }, [tagList]);
 
   const onChange = (e) => {
     setInputValue(e.target.value);
@@ -38,15 +42,16 @@ function TagsInput() {
   };
 
   return (
-    <div className="tagsConatiner">
-      {tags.map((tag, index) => {
-        return (
-          <div className="tag">
-            {tag}
-            <button onClick={() => deleteTag(index)}>X</button>
-          </div>
-        );
-      })}
+    <span className="tagsConatiner">
+      {tags &&
+        tags.map((tag, index) => {
+          return (
+            <div key={index} className="tag">
+              {tag}
+              <button onClick={() => deleteTag(index)}>X</button>
+            </div>
+          );
+        })}
       <input
         type="text"
         placeholder="Add a tag"
@@ -54,7 +59,7 @@ function TagsInput() {
         onChange={onChange}
         onKeyDown={onKeyDown}
       />
-    </div>
+    </span>
   );
 }
 
