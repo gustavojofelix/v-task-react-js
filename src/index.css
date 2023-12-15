@@ -357,7 +357,7 @@ header .themeSelector .activeTheme {
   width: 350px;
   box-shadow: var(--box-shadow);
   border-radius: 5px;
-  border-left: 5px solid #1365dfaf;
+  border-left: 5px solid hsla(216, 85%, 46%, 0.686);
 }
 
 .show__task .task__card__view li:hover {

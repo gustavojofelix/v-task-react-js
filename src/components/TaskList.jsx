@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { format, set } from "date-fns";
+import { format } from "date-fns";
 
 import AddTask from "./AddTask";
 import TaskCardItem from "./TaskCardItem";
@@ -12,7 +12,6 @@ function TaskList({ taskList, setTaskList, task, setTask }) {
   const [filteredTaskList, setFilteredTaskList] = React.useState(taskList);
 
   useEffect(() => {
-    console.log(searchText);
     if (searchText === "") {
       setFilteredTaskList(taskList);
     } else {
@@ -21,7 +20,7 @@ function TaskList({ taskList, setTaskList, task, setTask }) {
       );
       setFilteredTaskList(newFilteredTaskList);
     }
-  }, [searchText]);
+  }, [searchText, taskList]);
 
   useEffect(() => {
     setFilteredTaskList(taskList);
@@ -29,7 +28,6 @@ function TaskList({ taskList, setTaskList, task, setTask }) {
 
   const searchTask = (searchValue) => {
     setSearchText(searchValue);
-    console.log(searchValue);
   };
 
   function compare(a, b) {

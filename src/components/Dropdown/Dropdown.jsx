@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Dropdown.css";
 
-const options = [
-  { value: "pending", label: "Pending" },
-  { value: "done", label: "Done" },
-  { value: "in-progress", label: "In Progress" },
-];
+// const options = [
+//   { value: "pending", label: "Pending" },
+//   { value: "done", label: "Done" },
+//   { value: "in-progress", label: "In Progress" },
+// ];
 
 const optionsData = [
   { id: 0, title: "Pending", color: "#F7D154", selected: false, key: "status" },

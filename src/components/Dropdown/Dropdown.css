@@ -2,6 +2,9 @@
   position: relative;
   width: 220px;
   font-size: 1.6rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -49,7 +52,6 @@
   background-color: white;
   font-weight: 700;
   text-align: left;
-  -webkit-overflow-scrolling: touch;
   transition: all 0.2s ease-in-out;
 
   width: 222px;
